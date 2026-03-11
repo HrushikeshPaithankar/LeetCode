@@ -7,10 +7,10 @@ public:
         }
         int mask=0;
         int temp=n;
-        while(temp)
+        while(temp>0)
         {
             mask=(mask<<1) | 1;
-            temp>>=1;
+            temp/=2;
         }
         return mask^n;
     }
