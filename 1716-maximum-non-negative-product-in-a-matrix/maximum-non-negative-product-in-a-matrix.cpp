@@ -3,7 +3,7 @@ public:
     int maxProductPath(vector<vector<int>>& grid) {
         int MOD = 1e9 + 7;
         int m = grid.size(), n = grid[0].size();
-        // m is cols , n is rows
+        // m is  rows , n is cols
         int i, j;
         vector<vector<vector<long long>>> dp(m+1,
                                        vector<vector<long long>>(n+1, vector<long long>(2)));
