@@ -7,9 +7,9 @@ public:
             freq[word[i]]++;
         }
         int ans=0;
-        for(char c='A';c<='Z';c++)
+        for(auto &p:freq)
         {
-            if(freq[c] && freq[c+32])
+            if(freq[p.first+32])
             {
                 ans++;
             }
