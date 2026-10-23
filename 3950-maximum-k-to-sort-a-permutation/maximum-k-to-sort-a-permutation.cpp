@@ -1,21 +1,16 @@
 class Solution {
 public:
     int sortPermutation(vector<int>& nums) {
-        int ans ;
+        int ans=-1 ;
         bool ch = true;
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] != i) {
-                if (ch) {
-                    ans = nums[i];
-                    ch=false;
-                } else {
-                    ans &= nums[i];
-                }
+                ans&=nums[i];
             }
         }
-        if (!ch) {
-            return ans;
+        if (ans==-1) {
+            return 0;
         }
-        return 0;
+        return ans;
     }
 };
