@@ -25,6 +25,7 @@ int m,n;
     }
     int countIslands(vector<vector<int>>& grid, int k) {
         m = grid.size(), n = grid[0].size();
+        sum=0,ans=0;
         check.assign(m, vector<bool>(n, false));
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
